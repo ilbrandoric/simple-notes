@@ -1,12 +1,9 @@
 [
-  {
-    "id": 1,
-    "title": "Learn React",
-    "completed": false
-  },
-  {
-    "id": 2,
-    "title": "Build To-Do App",
-    "completed": false
-  }
+  { "task": "Read the project brief", "completed": true},
+  { "task": "Create a project repository", "completed": false},
+  { "task": "Create React application using Vite", "completed": false},
+  { "task": "Finish Day 1 Development Tasks", "completed": false},
+  { "task": "Finish Day 1 Research Tasks", "completed": false},
+  { "task": "Finish Day 2 Development Tasks", "completed": false},
+  { "task": "Finish Day 2 Research Tasks", "completed": false}
 ]

@@ -11,7 +11,7 @@ function TaskCard({ task, deleteTask, updateTask }) {
 
       <Link to={`/tasks/${task.id}`}>
         <div className="task-text">
-          <strong>{task.title}</strong>
+          <strong>{task.task}</strong>
           <span>This is a task description</span>
         </div>
       </Link>

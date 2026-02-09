@@ -16,7 +16,7 @@ function Dashboard({ tasks, deleteTask, createTask, updateTask }) {
   return (
     <div className="dashboard">
       <div className="dashboard-header">
-        <h1>simple-tasks</h1>
+        <h1></h1>
       </div>
 
       <form className="task-input" onSubmit={handleSubmit}>

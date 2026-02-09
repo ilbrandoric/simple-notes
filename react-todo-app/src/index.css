@@ -141,7 +141,9 @@ li > a {
   justify-content: center;
 
   cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
 }
 
 .icon-button.primary {
@@ -201,8 +203,7 @@ input[type="checkbox"]:hover {
   border-color: var(--accent);
 }
 
-
-/* Completed task styling */
+/* Strikethrough on completion */
 .task.completed {
   opacity: 0.6;
 }
@@ -214,4 +215,56 @@ input[type="checkbox"]:hover {
 
 .task.completed .task-text span {
   color: var(--muted);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 1rem;
+  background: var(--bg);
+  color: white;
+  z-index: 1000;
+}
+
+.nav-links a {
+  margin-left: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--bg);
+  z-index: 1000;
+}
+
+.footer a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.app-content {
+  padding-top: 60px;   /* navbar height */
+  padding-bottom: 50px; /* footer height */
 }

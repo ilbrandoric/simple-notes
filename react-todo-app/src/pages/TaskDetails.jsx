@@ -15,7 +15,7 @@ function TaskDetails({ tasks, updateTask }) {
     <div>
       <h1>Task Details</h1>
 
-      <p>{task.title}</p>
+      <p>{task.task}</p>
       <p>
         Completed: {task.completed ? "Yes" : "No"}
       </p>
