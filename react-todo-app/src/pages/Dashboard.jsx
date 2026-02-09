@@ -4,7 +4,6 @@ import TaskList from "../components/tasks/TaskList.jsx";
 function Dashboard({ tasks, deleteTask, createTask, updateTask }) {
   const [title, setTitle] = useState("");
   const inputRef = useRef(null);
-  const formRef = useRef(null);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -17,30 +16,17 @@ function Dashboard({ tasks, deleteTask, createTask, updateTask }) {
   return (
     <div className="dashboard">
       <div className="dashboard-header">
-        <h1>Clean ToDo</h1>
-        <button
-          type="button"
-          className="primary"
-          onClick={() => {
-            if (!title.trim()) {
-              inputRef.current?.focus();
-            } else {
-              formRef.current?.requestSubmit();
-            }
-          }}
-        >
-          Add new
-        </button>
+        <h1>simple-tasks</h1>
       </div>
 
-      <form ref={formRef} onSubmit={handleSubmit}>
+      <form className="task-input" onSubmit={handleSubmit}>
         <input
           ref={inputRef}
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="New task"
         />
-        <button>Add</button>
+        <button type="submit">✚</button>
       </form>
 
       <TaskList tasks={tasks} deleteTask={deleteTask} updateTask={updateTask} />

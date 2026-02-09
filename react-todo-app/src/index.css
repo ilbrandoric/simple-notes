@@ -119,3 +119,55 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* ---------- Task input (matches task cards) ---------- */
+.task-input {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+  max-width: 820px;
+
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+
+/* Input fills available space */
+.task-input input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  color: var(--text);
+  font-size: 15px;
+}
+
+/* Plus button */
+.task-input button {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: var(--accent);
+  color: white;
+
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-input button:hover {
+  opacity: 0.9;
+}
