@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import TaskList from "../components/tasks/TaskList.jsx";
 
 function Dashboard({ tasks, deleteTask, createTask, updateTask }) {
   const [title, setTitle] = useState("");
+  const inputRef = useRef(null);
+  const formRef = useRef(null);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -13,14 +15,27 @@ function Dashboard({ tasks, deleteTask, createTask, updateTask }) {
   }
 
   return (
-    <div>
+    <div className="dashboard">
       <div className="dashboard-header">
         <h1>Clean ToDo</h1>
-        <button className="primary">Add new</button>
+        <button
+          type="button"
+          className="primary"
+          onClick={() => {
+            if (!title.trim()) {
+              inputRef.current?.focus();
+            } else {
+              formRef.current?.requestSubmit();
+            }
+          }}
+        >
+          Add new
+        </button>
       </div>
 
-      <form onSubmit={handleSubmit}>
+      <form ref={formRef} onSubmit={handleSubmit}>
         <input
+          ref={inputRef}
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="New task"
