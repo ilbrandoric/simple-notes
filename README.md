@@ -1,130 +1,16 @@
-# ✅ React To-Do App
+# React + Vite
 
-A clean and functional Single Page Application (SPA) built with React that allows a user to manage daily tasks. This project demonstrates core React concepts including components, props, state, routing, forms, and conditional rendering.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🎯 Project Goal
+Currently, two official plugins are available:
 
-Build a fully working To-Do application that showcases strong React fundamentals, organized code, and an intuitive user experience.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 🚀 Features
+## React Compiler
 
-### Core Functionality
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-- View all tasks
-- Create new tasks
-- Update existing tasks
-- Delete tasks
-- View task details
+## Expanding the ESLint configuration
 
-### Application Structure
-
-- Single-user app (no authentication)
-- SPA powered by React Router
-- JSON-based dataset
-- Modular component architecture
-
-## 🧱 Pages
-
-- **Dashboard / Home** — Displays the task list
-- **Task Details** — Full information for a selected task
-- **About** — Project description + team member links
-- **Not Found** — Handles invalid routes
-
-## 🧩 Global Components
-
-Visible across all pages:
-
-- **Navbar** (app name + logo)
-- **Sidebar** (navigation)
-- **Footer** (GitHub repo link)
-
-## 🛠 Tech Stack
-
-- React
-- React Router
-- JavaScript (ES6+)
-- CSS
-- Optional enhancements: Tailwind, Context API, Reducers
-
-## 📂 Suggested Folder Structure
-
-```
-src/
-│
-├── components/
-│   ├── Navbar.jsx
-│   ├── Sidebar.jsx
-│   ├── Footer.jsx
-│   ├── TaskList.jsx
-│   ├── TaskCard.jsx
-│   └── TaskForm.jsx
-│
-├── pages/
-│   ├── Dashboard.jsx
-│   ├── TaskDetails.jsx
-│   ├── About.jsx
-│   └── NotFound.jsx
-│
-├── data/
-│   └── tasks.json
-│
-├── App.jsx
-└── main.jsx
-```
-
-## 🧠 React Concepts Demonstrated
-
-- Component-based architecture
-- Props
-- State management
-- Conditional rendering
-- Event handling
-- Controlled forms
-- Client-side routing
-
-## ✅ Definition of Done
-
-- **Functional**
-- **Technical**
-- **Quality**
-
-## ⚙️ Installation
-
-```bash
-# clone the repo
-git clone <your-repo-url>
-
-# navigate into the project
-cd react-todo-app
-
-# install dependencies
-npm install
-
-# start the development server
-npm run dev
-```
-
-## 👥 Team
-
-- Your Name
-- Teammate Name
-
-Add GitHub and LinkedIn links on the About page.
-
-## 🎤 Presentation Requirements
-
-- **Total time:** 5 minutes
-- **3 minutes** — Slides
-- **2 minutes** — Live demo
-
-### Suggested Slides
-
-1. Title
-2. Technical challenge + solution
-3. Biggest mistake + lesson learned
-4. Demo
-5. Closing
-
-## 🏁 Final Deliverable
-
-A polished beginner React application that clearly proves understanding of fundamental React concepts and collaborative development workflows.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
