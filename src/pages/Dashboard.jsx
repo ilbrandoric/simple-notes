@@ -27,7 +27,6 @@ function Dashboard({
         <h1></h1>
       </div>
 
-      {/* CREATE TASK */}
       <form className="task-input" onSubmit={handleSubmit}>
         <input
           ref={inputRef}
@@ -41,7 +40,6 @@ function Dashboard({
         </button>
       </form>
 
-      {/* TASK LIST WITH INLINE EDIT */}
       <div className="task-list">
         {tasks.map((task) => (
           <div

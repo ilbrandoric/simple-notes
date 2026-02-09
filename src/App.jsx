@@ -11,7 +11,6 @@ import Navbar from "./components/tasks/Navbar";
 import Footer from "./components/Footer";
 
 function App() {
-  // Initialize state from JSON + add IDs safely
   const initialTasks = tasksData.map((task, index) => ({
     id: index + 1,
     ...task,
@@ -19,12 +18,10 @@ function App() {
 
   const [tasks, setTasks] = useState(initialTasks);
 
-  // Delete task
   function deleteTask(id) {
     setTasks(tasks.filter((task) => task.id !== id));
   }
 
-  // Create task (matches JSON structure)
   function createTask(taskText) {
     const newTask = {
       id: Date.now(),
@@ -34,7 +31,6 @@ function App() {
     setTasks([...tasks, newTask]);
   }
 
-  // Toggle completed
   function updateTask(id) {
     setTasks(
       tasks.map((task) =>
@@ -45,7 +41,6 @@ function App() {
     );
   }
 
-  // ✅ REQUIRED: update task TEXT (inline edit support)
   function updateTaskText(id, newText) {
     setTasks(
       tasks.map((task) =>

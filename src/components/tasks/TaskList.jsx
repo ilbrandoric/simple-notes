@@ -1,7 +1,5 @@
 import TaskCard from "./TaskCard";
 
-// Renders one task (TaskCard)
-
 function TaskList({ tasks, deleteTask, updateTask }) {
   return (
     <ul>
