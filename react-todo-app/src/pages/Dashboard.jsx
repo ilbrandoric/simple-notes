@@ -26,7 +26,9 @@ function Dashboard({ tasks, deleteTask, createTask, updateTask }) {
           onChange={(e) => setTitle(e.target.value)}
           placeholder="New task"
         />
-        <button type="submit">✚</button>
+        <button type="submit" className="icon-button primary">
+          ✚
+        </button>
       </form>
 
       <TaskList tasks={tasks} deleteTask={deleteTask} updateTask={updateTask} />

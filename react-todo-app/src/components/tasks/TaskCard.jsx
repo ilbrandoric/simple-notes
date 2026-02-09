@@ -16,7 +16,12 @@ function TaskCard({ task, deleteTask, updateTask }) {
         </div>
       </Link>
 
-      <button onClick={() => deleteTask(task.id)}>🗑</button>
+      <button
+        className="icon-button danger"
+        onClick={() => deleteTask(task.id)}
+      >
+        ➖
+      </button>
     </li>
   );
 }
