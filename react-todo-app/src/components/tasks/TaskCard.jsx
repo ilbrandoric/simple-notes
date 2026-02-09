@@ -10,7 +10,10 @@ function TaskCard({ task, deleteTask, updateTask }) {
       />
 
       <Link to={`/tasks/${task.id}`}>
-        {task.title}
+        <div className="task-text">
+          <strong>{task.title}</strong>
+          <span>This is a task description</span>
+        </div>
       </Link>
 
       <button onClick={() => deleteTask(task.id)}>Delete</button>

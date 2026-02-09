@@ -14,7 +14,10 @@ function Dashboard({ tasks, deleteTask, createTask, updateTask }) {
 
   return (
     <div>
-      <h1>Dashboard</h1>
+      <div className="dashboard-header">
+        <h1>Clean ToDo</h1>
+        <button className="primary">Add new</button>
+      </div>
 
       <form onSubmit={handleSubmit}>
         <input
@@ -25,11 +28,7 @@ function Dashboard({ tasks, deleteTask, createTask, updateTask }) {
         <button>Add</button>
       </form>
 
-      <TaskList
-        tasks={tasks}
-        deleteTask={deleteTask}
-        updateTask={updateTask}
-      />
+      <TaskList tasks={tasks} deleteTask={deleteTask} updateTask={updateTask} />
     </div>
   );
 }
