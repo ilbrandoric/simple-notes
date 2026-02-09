@@ -200,3 +200,18 @@ input[type="checkbox"]:checked::after {
 input[type="checkbox"]:hover {
   border-color: var(--accent);
 }
+
+
+/* Completed task styling */
+.task.completed {
+  opacity: 0.6;
+}
+
+.task.completed .task-text strong {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.task.completed .task-text span {
+  color: var(--muted);
+}

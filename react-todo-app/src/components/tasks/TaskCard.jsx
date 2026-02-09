@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function TaskCard({ task, deleteTask, updateTask }) {
   return (
-    <li>
+    <li className={task.completed ? "task completed" : "task"}>
       <input
         type="checkbox"
         checked={task.completed}
